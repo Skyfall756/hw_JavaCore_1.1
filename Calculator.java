@@ -6,8 +6,16 @@ public class Calculator {
     BinaryOperator<Integer> plus = (x, y) -> x + y;
     BinaryOperator<Integer> minus = (x, y) -> x - y;
     BinaryOperator<Integer> multiply = (x, y) -> x * y;
-    BinaryOperator <Integer> devide = (x, y) -> x / y;
-//    BinaryOperator <Integer> devide = (x, y) -> y != 0 ? x / y : 0;
+    BinaryOperator <Integer> devide = (x, y) -> y != 0 ? x / y : -999999999;
+//    BinaryOperator <Integer> devide = (x, y) -> {
+//        try{
+//            return x / y;
+//        } catch (ArithmeticException ae) {
+//            System.out.println("error: / by zero");
+//        }
+//        return -999999999;
+//    };
+
 
 
 
